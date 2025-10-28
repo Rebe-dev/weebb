@@ -289,69 +289,35 @@ footer {
 
 /* === 🔹 AJUSTE RESPONSIVE PARA CELULARES === */
 @media (max-width: 768px) {
+    header h1 { font-size: 2rem; }
+    .layout-container { flex-direction: column; text-align: center; }
+    .text-area, .image-area { padding: 0; width: 100%; }
+    .image-area img { max-width: 100%; margin-top: 20px; }
+    nav ul { flex-direction: column; align-items: center; }
+    nav a { font-size: 1rem; margin-bottom: 10px; }
+    .content-block h2 { font-size: 1.8rem; }
+    .text-area p { font-size: 1rem; }
+    th, td { font-size: 0.9rem; padding: 0.5rem; }
+    #contactForm, #savedTable { width: 95%; padding: 20px; }
+    .nav-buttons { flex-direction: column; gap: 15px; }
+    .back-button, .next-button { width: 80%; text-align: center; }
+    footer { font-size: 0.9rem; }
+}
 
-    header h1 {
-        font-size: 2rem;
-    }
+/* === 🔹 ESCALADO PROPORCIONAL (MISMO DISEÑO EN TELÉFONO) === */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
-    .layout-container {
-        flex-direction: column;
-        text-align: center;
-    }
+@media (max-width: 1024px) { body { transform: scale(0.9); transform-origin: top center; } }
+@media (max-width: 768px) { body { transform: scale(0.8); transform-origin: top center; } }
+@media (max-width: 600px) { body { transform: scale(0.75); transform-origin: top center; } }
+@media (max-width: 480px) { body { transform: scale(0.7); transform-origin: top center; } }
 
-    .text-area, .image-area {
-        padding: 0;
-        width: 100%;
-    }
-
-    .image-area img {
-        max-width: 100%;
-        margin-top: 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav a {
-        font-size: 1rem;
-        margin-bottom: 10px;
-    }
-
-    .content-block h2 {
-        font-size: 1.8rem;
-    }
-
-    .text-area p {
-        font-size: 1rem;
-    }
-
-    th, td {
-        font-size: 0.9rem;
-        padding: 0.5rem;
-    }
-
-    #contactForm {
-        width: 95%;
-        padding: 20px;
-    }
-
-    #savedTable {
-        width: 95%;
-    }
-
-    .nav-buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .back-button, .next-button {
-        width: 80%;
-        text-align: center;
-    }
-
-    footer {
-        font-size: 0.9rem;
-    }
+img, iframe, video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
